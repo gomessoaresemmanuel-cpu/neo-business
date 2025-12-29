@@ -1,0 +1,128 @@
+site:
+  name: "IA Transcription"
+  brand_parent: "NEO Business"
+  language: "fr-FR"
+  domain_parent: "neobusiness.fr"
+  subdomain: "ia-transcription.neobusiness.fr"
+  primary_goal: "email_capture"
+  secondary_goals:
+    - "affiliate_clicks"
+    - "audit_requests"
+
+content_style:
+  tone: "simple"
+  rules:
+    - "phrases courtes"
+    - "1 intention par page"
+    - "pas de blabla"
+    - "CTA clair"
+
+personas:
+  - id: "podcaster"
+    pain: "transcrire prend trop de temps"
+    desired: "texte propre vite"
+  - id: "youtubeur"
+    pain: "sous-titres pénibles"
+    desired: "SRT/VTT rapide"
+  - id: "freelance"
+    pain: "résumer des calls clients"
+    desired: "compte-rendu rapide"
+
+offer:
+  lead_magnet:
+    title: "Checklist gratuite: Transcrire 10x plus vite"
+    deliver: "email"
+  service:
+    title: "Audit NEO: automation + tracking"
+    cta: "Demander un audit"
+  affiliate_tools:
+    - name: "Descript"
+      tag: "éditeur + transcription"
+    - name: "Otter"
+      tag: "transcription réunions"
+    - name: "Whisper"
+      tag: "modèle transcription"
+
+pages:
+  landing:
+    path: "/"
+    seo:
+      title: "Transcription IA en français | Rapide et propre"
+      description: "Transcris audio et vidéo. Exporte en texte, SRT, VTT. Gagne du temps."
+    sections:
+      - "hero"
+      - "benefits"
+      - "how_it_works"
+      - "use_cases"
+      - "tools_affiliate"
+      - "email_capture_cta"
+      - "faq"
+      - "final_cta"
+  comparatif:
+    path: "/comparatif"
+    seo:
+      title: "Meilleur outil de transcription 2025 | Comparatif"
+      description: "Compare Descript, Otter, Whisper et alternatives. Choisis vite."
+  blog_index:
+    path: "/blog"
+    seo:
+      title: "Blog transcription IA | Guides simples"
+      description: "Guides sur transcription, sous-titres, SRT/VTT, workflows."
+  blog_post:
+    path: "/blog/[slug]"
+    seo:
+      template_title: "{title} | Transcription IA"
+      template_description: "{excerpt}"
+
+blog_posts:
+  - slug: "transcription-ia-gratuite"
+    title: "Transcription IA gratuite: guide 2025"
+    excerpt: "Outils, limites, qualité, exports."
+    faq:
+      - q: "Est-ce vraiment gratuit ?"
+        a: "Parfois. Souvent limité."
+      - q: "La qualité est bonne ?"
+        a: "Ça dépend du son."
+      - q: "Je peux exporter en SRT ?"
+        a: "Oui, selon l’outil."
+  - slug: "export-srt-vtt"
+    title: "Exporter en SRT et VTT: méthode simple"
+    excerpt: "Formats, outils, erreurs."
+  - slug: "sous-titres-automatiques"
+    title: "Sous-titres automatiques: pièges et solutions"
+    excerpt: "Qualité, timing, relecture."
+  - slug: "workflow-n8n-transcription"
+    title: "Workflow n8n: pipeline de transcription"
+    excerpt: "Du fichier au texte, puis au résumé."
+  - slug: "meilleur-outil-transcription-2025"
+    title: "Meilleur outil de transcription 2025"
+    excerpt: "Comparatif rapide et choix."
+
+seo:
+  sitemap: true
+  robots:
+    disallow:
+      - "/api"
+  canonical: true
+  open_graph: true
+  schema:
+    - "Article"
+    - "FAQPage"
+  internal_links_per_page: 3
+
+email_capture:
+  supabase_table: "subscribers"
+  fields:
+    - "email"
+    - "source"
+    - "created_at"
+  webhook:
+    env_var: "N8N_WEBHOOK_URL"
+    payload:
+      - "email"
+      - "source"
+      - "page"
+
+tracking:
+  ga_env: "NEXT_PUBLIC_GA_ID"
+  plausible_env: "NEXT_PUBLIC_PLAUSIBLE_DOMAIN"
