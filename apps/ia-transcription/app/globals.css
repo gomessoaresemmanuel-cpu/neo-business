@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --ring-color: rgba(14, 165, 233, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @apply bg-surface-base text-text-high antialiased;
+}
+
+a {
+  @apply text-primary transition-colors duration-200;
+}
+
+a:hover {
+  @apply text-primary-dark;
+}
+
+.prose-invert h1,
+.prose-invert h2,
+.prose-invert h3 {
+  @apply text-text-high;
+}
+
+.prose-invert p,
+.prose-invert li {
+  @apply text-text-muted;
+}
+
+::selection {
+  @apply bg-primary/20 text-text-high;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--ring-color);
+  outline-offset: 2px;
+}

@@ -1,0 +1,13 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#0EA5E9" offset="0%"/>
+      <stop stop-color="#6366F1" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0B0F14"/>
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="url(#g)" opacity="0.14"/>
+  <text x="80" y="170" fill="#E5ECF5" font-family="Inter, Arial" font-size="52" font-weight="700">IA Transcription · NEO Business</text>
+  <text x="80" y="250" fill="#B8C7DA" font-family="Inter, Arial" font-size="28">Transcris audio et vidéo. Exporte en texte, SRT, VTT.</text>
+  <text x="80" y="300" fill="#B8C7DA" font-family="Inter, Arial" font-size="24">Checklist offerte + comparatif Descript / Otter / Whisper.</text>
+</svg>
